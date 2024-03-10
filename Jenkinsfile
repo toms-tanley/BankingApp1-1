@@ -31,12 +31,12 @@ pipeline {
 				sh "docker tag dprasaddevops/bankapp-eta-app:${BUILD_NUMBER} dprasaddevops/bankapp-eta-app:latest"
             }
         }
-		//stage('Login2DockerHub') {
+		stage('Login2DockerHub') {
 
-		//	steps {
-		//		sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
-		//	}
-		//}
+			steps {
+				sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
+			}
+		}
 		stage('Push2DockerHub') {
 
 			steps {
