@@ -50,7 +50,7 @@ pipeline {
 		//      }
 		KubernetesDeploy{
 			configs: 'kubernetesdeploy.yaml',
-                        kubeconfigId: 'my-kubeconfig'
+                        kubeconfigId: 'kubernetes'
             }
     	}
     }
